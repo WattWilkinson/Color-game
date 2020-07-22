@@ -18,62 +18,69 @@ struct ContentView: View {
     @State var colorString = "green"
     @State private var buttonDisabled = true
     var body: some View {
-        VStack {
-            Text("Welcome to the color game!").font(.system(size: 44, weight: .bold, design: .rounded)).foregroundColor(Color.orange).multilineTextAlignment(.center)
-          
-            Text("Score: \(score)").font(Font.custom("HelveticaNeue-CondensedBlack", size: 33)).foregroundColor(Color.red)
-           
-            Text("Time: \(timer)").font(Font.custom("HelveticaNeue-CondensedBlack", size: 33)).foregroundColor(Color.purple)
-            Spacer()
-            Button(action: {}) {
-                Text(text).font(.system(size: 60, weight: .heavy, design: .rounded)).foregroundColor(color).onTapGesture {
-                    self.startGame()
+        NavigationView {
+            VStack {
+                HStack {
+                    NavigationLink(destination: InstructionsView()) {
+                        Text("Instructions").font(Font.system(size: 28, weight: .heavy, design: .rounded))
+                        Image(systemName: "info.circle").font(Font.system(size: 20)).foregroundColor(Color.white).padding().background(Color.blue).cornerRadius(20)
+                }.font(Font.system(size: 20)).foregroundColor(Color.white).padding().background(Color.blue).cornerRadius(20)
                 }
-                
-            }
-            Spacer()
-            VStack(spacing: 20) {
-                HStack(spacing: 5) {
-                    
-                    Button(action: {self.checkButton(colorOfButtonPress: "red")}) {
-                        Text("Red").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
-                        }.padding(.all,20 ).frame(maxWidth: .infinity).background(Color.red).cornerRadius(22).disabled(buttonDisabled)
-                     Spacer()
-                    Button(action: {self.checkButton(colorOfButtonPress: "green")}) {
-                         Text("Green").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
-                        } .padding(.all, 20).frame(maxWidth: .infinity).background(Color.green).cornerRadius(22).disabled(buttonDisabled)
-                     
-                 }
-                
-                 HStack {
-                    Button(action: {self.checkButton(colorOfButtonPress: "blue")}) {
-                       Text("Blue").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
-                   }.padding(.all, 20).frame(maxWidth: .infinity).background(Color.blue).cornerRadius(22).disabled(buttonDisabled)
-                     Button(action: {self.checkButton(colorOfButtonPress: "black")}) {
-                         Text("Black").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
-                     }.padding(.all, 20 ).frame(maxWidth: .infinity).background(Color.black).cornerRadius(22).disabled(buttonDisabled)
-                     }
-                 
-                
-                 HStack {
-                   Button(action: {self.checkButton(colorOfButtonPress: "orange")}) {
-                       Text("Orange").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
-                   }.padding(.all, 20).frame(maxWidth: .infinity).background(Color.orange).cornerRadius(22).disabled(buttonDisabled)
-                     Button(action: {self.checkButton(colorOfButtonPress: "pink")}) {
-                         Text("Pink").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
-                     }.padding(.all, 20 ).frame(maxWidth: .infinity).background(Color.pink).cornerRadius(22).disabled(buttonDisabled)
-                     }
-                 
-                  HStack {
-                    Button(action: { self.checkButton(colorOfButtonPress: "purple")}) {
-                        Text("Purple").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
-                    }.padding(.all, 20).frame(maxWidth: .infinity).background(Color.purple).cornerRadius(22).disabled(buttonDisabled)
-                      Button(action: {self.checkButton(colorOfButtonPress: "yellow")}) {
-                          Text("Yellow").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
-                      }.padding(.all, 20 ).frame(maxWidth: .infinity).background(Color.yellow).cornerRadius(22).disabled(buttonDisabled)
-                      }
-            }
-            }
+                       Text("Score: \(score)").font(Font.custom("HelveticaNeue-CondensedBlack", size: 33)).foregroundColor(Color.red)
+                      
+                       Text("Time: \(timer)").font(Font.custom("HelveticaNeue-CondensedBlack", size: 33)).foregroundColor(Color.purple)
+                       Spacer()
+                       Button(action: {}) {
+                           Text(text).font(.system(size: 60, weight: .heavy, design: .rounded)).foregroundColor(color).onTapGesture {
+                               self.startGame()
+                           }
+                           
+                       }
+                       Spacer()
+                       VStack(spacing: 20) {
+                           HStack(spacing: 5) {
+                               
+                               Button(action: {self.checkButton(colorOfButtonPress: "red")}) {
+                                   Text("Red").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
+                                   }.padding(.all,20 ).frame(maxWidth: .infinity).background(Color.red).cornerRadius(22).disabled(buttonDisabled)
+                                Spacer()
+                               Button(action: {self.checkButton(colorOfButtonPress: "green")}) {
+                                    Text("Green").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
+                                   } .padding(.all, 20).frame(maxWidth: .infinity).background(Color.green).cornerRadius(22).disabled(buttonDisabled)
+                                
+                            }
+                           
+                            HStack {
+                               Button(action: {self.checkButton(colorOfButtonPress: "blue")}) {
+                                  Text("Blue").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
+                              }.padding(.all, 20).frame(maxWidth: .infinity).background(Color.blue).cornerRadius(22).disabled(buttonDisabled)
+                                Button(action: {self.checkButton(colorOfButtonPress: "black")}) {
+                                    Text("Black").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
+                                }.padding(.all, 20 ).frame(maxWidth: .infinity).background(Color.black).cornerRadius(22).disabled(buttonDisabled)
+                                }
+                            
+                           
+                            HStack {
+                              Button(action: {self.checkButton(colorOfButtonPress: "orange")}) {
+                                  Text("Orange").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
+                              }.padding(.all, 20).frame(maxWidth: .infinity).background(Color.orange).cornerRadius(22).disabled(buttonDisabled)
+                                Button(action: {self.checkButton(colorOfButtonPress: "pink")}) {
+                                    Text("Pink").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
+                                }.padding(.all, 20 ).frame(maxWidth: .infinity).background(Color.pink).cornerRadius(22).disabled(buttonDisabled)
+                                }
+                            
+                             HStack {
+                               Button(action: { self.checkButton(colorOfButtonPress: "purple")}) {
+                                   Text("Purple").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
+                               }.padding(.all, 20).frame(maxWidth: .infinity).background(Color.purple).cornerRadius(22).disabled(buttonDisabled)
+                                 Button(action: {self.checkButton(colorOfButtonPress: "yellow")}) {
+                                     Text("Yellow").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.white)
+                                 }.padding(.all, 20 ).frame(maxWidth: .infinity).background(Color.yellow).cornerRadius(22).disabled(buttonDisabled)
+                                 }
+                       }.padding(.horizontal, 20).navigationBarTitle("Welcome to the Color Game", displayMode: .inline)
+                       }
+        }
+       
         }
     func startGame() {
         if timer == 15 {

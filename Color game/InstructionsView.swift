@@ -11,8 +11,8 @@ import SwiftUI
 struct InstructionsView: View {
     var body: some View {
         VStack {
-            Text("You have 15 seconds to get the most points possible!").font(Font.system(size: 36, weight: .heavy, design: .rounded)).multilineTextAlignment(.center).padding()
-            Text("Click on the button with the color of the text, not the text itself!").font(Font.system(size: 28, weight: .regular, design: .rounded)).multilineTextAlignment(.center).padding()
+            Text("You have 15 seconds to get the most points possible!").font(Font.system(size: 36, weight: .heavy, design: .rounded)).multilineTextAlignment(.center)
+            Text("Click on the button with the color of the text, not the text itself!").font(Font.system(size: 20, weight: .regular, design: .rounded)).multilineTextAlignment(.center).padding()
             Text("Yellow").font(Font.system(size: 101, weight: .heavy, design: .rounded)).foregroundColor(Color.blue).padding()
             Text("For example, this would be blue").font(Font.system(size: 22, weight: .bold, design: .rounded))
             Text("Blue").font(Font.system(size: 101, weight: .heavy, design: .rounded)).foregroundColor(Color.orange).padding()
