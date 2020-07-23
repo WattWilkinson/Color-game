@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		118DEF0A24C61D980032B378 /* Color_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118DEF0924C61D980032B378 /* Color_gameUITests.swift */; };
 		118E80DC24C8B1870076ADB8 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E80DB24C8B1870076ADB8 /* InstructionsView.swift */; };
 		118E80DE24C8C7340076ADB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 118E80DD24C8C7340076ADB8 /* GoogleService-Info.plist */; };
+		118E80E024C9FCD60076ADB8 /* leaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E80DF24C9FCD60076ADB8 /* leaderboardView.swift */; };
 		3DC96144100CDD77E4D84FE0 /* Pods_Color_gameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A1AAC63F0A6779E493850D /* Pods_Color_gameTests.framework */; };
 		723470F2913E302619255D28 /* Pods_Color_game_Color_gameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A54F5969631468CCB3D246 /* Pods_Color_game_Color_gameUITests.framework */; };
 		887095FFD90625EBF59E1623 /* Pods_Color_game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A918BE59602DD0F0FAEAC3 /* Pods_Color_game.framework */; };
@@ -57,6 +58,7 @@
 		118DEF0B24C61D980032B378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		118E80DB24C8B1870076ADB8 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		118E80DD24C8C7340076ADB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		118E80DF24C9FCD60076ADB8 /* leaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leaderboardView.swift; sourceTree = "<group>"; };
 		19A54F5969631468CCB3D246 /* Pods_Color_game_Color_gameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_game_Color_gameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A918BE59602DD0F0FAEAC3 /* Pods_Color_game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C32FBC33471D71D8E8AA50D /* Pods-Color game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color game.debug.xcconfig"; path = "Target Support Files/Pods-Color game/Pods-Color game.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				118DEEE724C61D960032B378 /* AppDelegate.swift */,
 				118DEEE924C61D960032B378 /* SceneDelegate.swift */,
 				118DEEEB24C61D960032B378 /* ContentView.swift */,
+				118E80DF24C9FCD60076ADB8 /* leaderboardView.swift */,
 				118E80DB24C8B1870076ADB8 /* InstructionsView.swift */,
 				118DEEED24C61D980032B378 /* Assets.xcassets */,
 				118DEEF224C61D980032B378 /* LaunchScreen.storyboard */,
@@ -169,7 +172,6 @@
 				0952E29C32B4AA9F7D1F14A4 /* Pods-Color gameTests.debug.xcconfig */,
 				6E0751F7AD2A189B43CCF977 /* Pods-Color gameTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -427,6 +429,7 @@
 				118E80DC24C8B1870076ADB8 /* InstructionsView.swift in Sources */,
 				118DEEEA24C61D960032B378 /* SceneDelegate.swift in Sources */,
 				118DEEEC24C61D960032B378 /* ContentView.swift in Sources */,
+				118E80E024C9FCD60076ADB8 /* leaderboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

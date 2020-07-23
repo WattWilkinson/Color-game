@@ -25,10 +25,13 @@ struct ContentView: View {
             VStack {
                 HStack {
                     NavigationLink(destination: InstructionsView()) {
-                        Text("Instructions").font(Font.system(size: 28, weight: .heavy, design: .rounded))
+                        Text("Instructions").font(Font.system(size: 15, weight: .heavy, design: .rounded))
                         Image(systemName: "info.circle").font(Font.system(size: 20)).foregroundColor(Color.white).padding().background(Color.blue).cornerRadius(20)
                 }.font(Font.system(size: 20)).foregroundColor(Color.white).padding().background(Color.blue).cornerRadius(20)
-                }
+                    NavigationLink(destination: Leaderboard()) {
+                            Text("Leaderboard").font(Font.system(size: 14, weight: .heavy, design: .rounded))
+                            Image(systemName: "info.circle").font(Font.system(size: 20)).foregroundColor(Color.white).padding().background(Color.blue).cornerRadius(20)
+                    }.font(Font.system(size: 20)).foregroundColor(Color.white).padding().background(Color.blue).cornerRadius(20)}
                        Text("Score: \(score)").font(Font.custom("HelveticaNeue-CondensedBlack", size: 33)).foregroundColor(Color.red)
                       
                        Text("Time: \(timer)").font(Font.custom("HelveticaNeue-CondensedBlack", size: 33)).foregroundColor(Color.purple)
