@@ -1,0 +1,6 @@
+framework module Pods_Color_game_Color_gameUITests {
+  umbrella header "Pods-Color game-Color gameUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

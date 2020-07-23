@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>185941491184-23b1lsthmbfv6tg3vav6u9hn3m8f1ghg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.185941491184-23b1lsthmbfv6tg3vav6u9hn3m8f1ghg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC-D2cRaLTlnZqT8h9-gw4i1VoczivEZC0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>185941491184</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Watt-Wilkinson.Color-game</string>
+	<key>PROJECT_ID</key>
+	<string>color-game-2b52d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>color-game-2b52d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:185941491184:ios:db2a22fd9e7182e668b135</string>
+	<key>DATABASE_URL</key>
+	<string>https://color-game-2b52d.firebaseio.com</string>
+</dict>
+</plist>

@@ -7,7 +7,8 @@
 //
 
 import SwiftUI
-
+import Firebase
+import FirebaseFirestore
 struct ContentView: View {
     @State var score = 0
     @State var timer = 15
@@ -17,6 +18,8 @@ struct ContentView: View {
     @State var colorss = ["red", "green", "blue", "black", "orange", "pink", "purple", "yellow"]
     @State var colorString = "green"
     @State private var buttonDisabled = true
+    @State var player = "Watt"
+    var db = Firestore.firestore()
     var body: some View {
         NavigationView {
             VStack {
@@ -104,6 +107,8 @@ struct ContentView: View {
         }else {
             text = ("Start Over!")
             buttonDisabled = true
+            self.checkScore()
+            
         }
     }
     func newColor() {
@@ -124,7 +129,39 @@ struct ContentView: View {
             self.newColor()
         }
     }
-}
+    func checkScore() {
+        let docRef = db.collection("leaderboard").document(player)
+        docRef.getDocument {
+            (document, error) in
+            if let document = document, document.exists {
+                if var highScore = document.get("score") as? Int {
+                    print("userhighscore", highScore)
+                    if self.score > highScore {
+                        self.uploadscore()
+                    }
+                }
+            }else {
+                print("Document does not exist")
+                self.uploadscore()
+            }
+        }
+    }
+            func uploadscore() {
+                self.db.collection("leaderboard").document(self.player).setData([
+                    "name" : self.player, "score" : self.score
+                           ]) {err in
+                               if let err = err {
+                                   print("Error writing the document")
+                                   print(err)
+                               }else {
+                                   print("Document succesfully written! It worked!")
+                               }
+            }
+        }
+        
+      
+    }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
